@@ -1,0 +1,6 @@
+C:\Users\polo\Documents\Cours\C#\projet\Chat\Chat\bin\Debug\Chat.exe.config
+C:\Users\polo\Documents\Cours\C#\projet\Chat\Chat\bin\Debug\Chat.exe
+C:\Users\polo\Documents\Cours\C#\projet\Chat\Chat\bin\Debug\Chat.pdb
+C:\Users\polo\Documents\Cours\C#\projet\Chat\Chat\obj\Debug\Chat.csprojResolveAssemblyReference.cache
+C:\Users\polo\Documents\Cours\C#\projet\Chat\Chat\obj\Debug\Chat.exe
+C:\Users\polo\Documents\Cours\C#\projet\Chat\Chat\obj\Debug\Chat.pdb
