@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Created by Timothée LE CORRE and Camille Melo
+
 namespace Chatprojet.Chat
 {
     public class TextChatter : Chatter
@@ -31,12 +33,12 @@ namespace Chatprojet.Chat
 
         public void JoinNotification(Chatter c)
         {
-            Console.WriteLine(c.GetAlias() + " join");
+            Console.WriteLine(c.GetAlias() + " has join the room");
         }
 
         public void QuitNotification(Chatter c)
         {
-            Console.WriteLine(c.GetAlias() + " quit");
+            Console.WriteLine(c.GetAlias() + " has quit the room");
         }
     }
 }

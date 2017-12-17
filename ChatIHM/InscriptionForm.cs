@@ -1,5 +1,4 @@
-﻿using Chatprojet.Chat;
-using Client;
+﻿using Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,12 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 //Created by Timothée LE CORRE and Camille Melo
 
 namespace ChatIHM
 {
-    public partial class AuthentificationForm : Form
+    public partial class InscriptionForm : Form
     {
         #region field
         //Variable use to move the form
@@ -29,11 +27,10 @@ namespace ChatIHM
 
         #region Constructor
 
-        public AuthentificationForm()
+        public InscriptionForm(ClientTopicsManager ctm)
         {
-            ctm = new ClientTopicsManager();
-            ctm.SetServer("127.0.0.1", 26763);
-            ctm.Connect();
+            this.ctm = ctm;
+
             InitializeComponent();
         }
 
@@ -42,14 +39,14 @@ namespace ChatIHM
         #region Form events to move and close the form
 
         //these 3 methodes are event to move the form
-        private void AuthentificationForm_MouseDown(object sender, MouseEventArgs e)
+        private void InscriptionForm_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
             dragCursorPoint = Cursor.Position;
             dragFormPoint = this.Location;
         }
 
-        private void AuthentificationForm_MouseMove(object sender, MouseEventArgs e)
+        private void InscriptionForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
             {
@@ -58,7 +55,7 @@ namespace ChatIHM
             }
         }
 
-        private void AuthentificationForm_MouseUp(object sender, MouseEventArgs e)
+        private void InscriptionForm_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
         }
@@ -82,37 +79,17 @@ namespace ChatIHM
 
         #region event methods
 
-        private void ConnexionButton_Click(object sender, EventArgs e)
+        private void InscriptionButton_Click(object sender, EventArgs e)
         {
-            string errorMessage= "";
-            //Console.WriteLine(loginTextBox.Text + "  " + passwordTextBox.Text);
-            if(ctm.Login(loginTextBox.Text,passwordTextBox.Text,ref errorMessage))
+            if (ctm.Register(pseudoTextBox.Text, passwordTextBox.Text))
             {
-                this.Hide();
-
-                TopicForm topicForm = new TopicForm(this, ctm, new TextChatter(loginTextBox.Text));
-                topicForm.Show();
+                this.Close();
             }
             else
             {
-                if(errorMessage == "incorrect")
-                {
-                    ErrorLoginLabel.Show();
-                }
-                else
-                {
-                    ErrorConnexionLabel.Show();
-                }
+                ErrorUserExistLabel.Show();
                 retryLabel.Show();
             }
-        }
-
-        private void inscriptionButton_Click(object sender, EventArgs e)
-        {
-            ErrorLoginLabel.Hide();
-            ErrorConnexionLabel.Hide();
-            InscriptionForm inscription = new InscriptionForm(ctm);
-            inscription.Show();
         }
 
         #endregion

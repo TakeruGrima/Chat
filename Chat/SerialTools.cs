@@ -7,6 +7,8 @@ using System.Runtime.Serialization.Formatters.Soap;
 using System.Text;
 using System.Threading.Tasks;
 
+//Created by Timothée LE CORRE and Camille Melo
+
 namespace Chat
 {
     class SerialTools

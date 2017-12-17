@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Created by Timothée LE CORRE and Camille Melo
+
 namespace Chatprojet.Chat
 {
     public interface Chatroom
@@ -19,5 +21,6 @@ namespace Chatprojet.Chat
 
         //Récuperer le Topic de la chatroom
         string getTopic();
+        string Topic { get; set; }
     }
 }

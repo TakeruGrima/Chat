@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Created by Timothée LE CORRE and Camille Melo
+
 namespace Chat.Authentification
 {
     public class Authentification : AuthentificationManager
@@ -22,7 +24,7 @@ namespace Chat.Authentification
             {
                 if (user.CompareTo(new User(login, "")) == 0)
                 {
-                    throw new UserUnknownException(login + " already exist");
+                    throw new UserExistsException(login + " already exist");
                 }
             }
             users.Add(new User(login, password));
@@ -47,6 +49,7 @@ namespace Chat.Authentification
         {
             if (users.Contains(new User(login, password)))
             {
+                Console.WriteLine("The user is connected");
             }
 
             else

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+//Created by Timothée LE CORRE and Camille Melo
+
 namespace Chatprojet.Chat
 {
     public interface TopicsManager

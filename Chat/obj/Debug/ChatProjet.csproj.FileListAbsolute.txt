@@ -13,7 +13,20 @@ C:\Users\polo\Documents\Cours\EFREI\C#\projet\Chat\Chat\obj\Debug\ChatProjet.csp
 C:\Users\polo\Documents\Chat\Chat\bin\Debug\Chat.exe.config
 C:\Users\polo\Documents\Chat\Chat\bin\Debug\Chat.exe
 C:\Users\polo\Documents\Chat\Chat\bin\Debug\Chat.pdb
-C:\Users\polo\Documents\Chat\Chat\obj\Debug\ChatProjet.csprojResolveAssemblyReference.cache
 C:\Users\polo\Documents\Chat\Chat\obj\Debug\ChatProjet.csproj.CoreCompileInputs.cache
 C:\Users\polo\Documents\Chat\Chat\obj\Debug\Chat.exe
 C:\Users\polo\Documents\Chat\Chat\obj\Debug\Chat.pdb
+C:\Users\polo\Documents\Chat\Chat\obj\Debug\ChatProjet.csprojResolveAssemblyReference.cache
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Chat\bin\Debug\Chat.exe.config
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Chat\bin\Debug\Chat.exe
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Chat\bin\Debug\Chat.pdb
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Chat\obj\Debug\ChatProjet.csproj.CoreCompileInputs.cache
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Chat\obj\Debug\Chat.exe
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Chat\obj\Debug\Chat.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Chat\bin\Debug\Chat.exe.config
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Chat\bin\Debug\Chat.exe
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Chat\bin\Debug\Chat.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Chat\obj\Debug\ChatProjet.csprojResolveAssemblyReference.cache
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Chat\obj\Debug\ChatProjet.csproj.CoreCompileInputs.cache
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Chat\obj\Debug\Chat.exe
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Chat\obj\Debug\Chat.pdb

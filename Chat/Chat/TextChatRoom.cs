@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Created by Timothée LE CORRE and Camille Melo
+
 namespace Chatprojet.Chat
 {
     public class TextChatRoom : Chatroom
     {
         //Propriétés
-        public string Topic { private get; set; }//string contenant le topic de la chatroom
+        private string _topic; 
+        public string Topic { get { return _topic; } set { _topic = value; } }//string contenant le topic de la chatroom
 
         //Attibuts
         List<Chatter> Chatters;//List contenant les chatters de la chatroom
@@ -30,7 +33,10 @@ namespace Chatprojet.Chat
         public void Join(Chatter c)
         {
             Chatters.Add(c);
-            Console.WriteLine("(Message from Chatroom : "+Topic+")"+ c.GetAlias() + " has join the room.");
+            foreach(Chatter chatter in Chatters)
+            {
+                chatter.JoinNotification(c);
+            }
         }
 
         //Post un message
@@ -38,7 +44,7 @@ namespace Chatprojet.Chat
         {
             if(Chatters.Count>0)
             {
-                foreach (TextChatter chatter in Chatters)
+                foreach (Chatter chatter in Chatters)
                 {
                     Console.Write("(At " + chatter.GetAlias() + ") : ");
                     chatter.ReceiveAMessage(msg, c);
@@ -49,8 +55,15 @@ namespace Chatprojet.Chat
         //Quitter la chatroom
         public void Quit(Chatter c)
         {
-            Chatters.Remove(c);
+            if (Chatters.Count > 0)
+            {
+                foreach (Chatter chatter in Chatters)
+                {
+                    chatter.QuitNotification(c);
+                }
+            }
             Console.WriteLine("(Message from Chatroom : " + Topic + ")" + c.GetAlias() + "has left the room.");
+            Chatters.Remove(c);
         }
     }
 }

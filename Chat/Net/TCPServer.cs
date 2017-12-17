@@ -4,10 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+
+//Created by Timothée LE CORRE and Camille Melo
 
 namespace Chat.Net
 {
@@ -41,9 +44,14 @@ namespace Chat.Net
         {
             try
             {
-                waitSock = new TcpListener(new IPAddress(new byte[] { 127, 0, 0, 1 }), port);
+                this.port = port;
+
+                waitSock = new TcpListener(new IPAddress(new byte[] { 127, 0, 0, 1 }), this.port);
                 waitSock.Start();
-                Console.WriteLine("Connection");
+
+                Console.WriteLine("ServerConnection...");
+
+                new Thread(Run).Start();
             }
             catch (IOException e)
             {
@@ -65,24 +73,32 @@ namespace Chat.Net
 
         public void Run()
         {
-            if(mode == Mode.treatConnections)
+            if(mode == Mode.treatClient)
+            {
+                new Thread(GereClient).Start();
+            }
+            else if(mode == Mode.treatConnections)
             {
                 while(true)
                 {
+                    comm = waitSock.AcceptTcpClient();
+
+                    Console.WriteLine("conncection established...");
                     try
                     {
-                        comm = waitSock.AcceptTcpClient();
                         TCPServer myClone = (TCPServer)this.Clone();
                         myClone.mode = Mode.treatClient;
-                        new Thread(myClone.GereClient).Start();
+                        new Thread(new ThreadStart( myClone.Run)).Start();
                     }
                     catch (IOException e)
                     {
                         Console.WriteLine(e);
+                        throw;
                     }
                     catch (NotSupportedException e)
                     {
                         Console.WriteLine(e);
+                        throw;
                     }
                 }
             }
@@ -100,16 +116,39 @@ namespace Chat.Net
 
         public Message GetMessage()
         {
-                Stream input = comm.GetStream();
+            try
+            {
+                NetworkStream input = comm.GetStream();
 
-                BinaryFormatter bf = new BinaryFormatter();
-                return (Message)bf.Deserialize(input);
+                IFormatter formatter = new BinaryFormatter();
+                return (Message)formatter.Deserialize(input);
+            }
+            catch (SerializationException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            return null;
         }
 
         public void SendMessage(Message m)
         {
-            BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(comm.GetStream(), m);
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(comm.GetStream(), m);
+            }
+            catch(SerializationException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            catch(IOException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
         }
 
         #endregion

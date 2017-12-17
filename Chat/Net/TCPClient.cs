@@ -4,9 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+
+//Created by Timothée LE CORRE and Camille Melo
 
 namespace Chat.Net
 {
@@ -72,13 +75,16 @@ namespace Chat.Net
         {
             try
             {
-                Stream input = comm.GetStream();
+                NetworkStream input = comm.GetStream();
 
-                BinaryFormatter bf = new BinaryFormatter();
+                BinaryFormatter formatter = new BinaryFormatter();
 
-                Message m = (Message)bf.Deserialize(input);
-                Console.WriteLine(m.head);
-                return (Message)bf.Deserialize(input);
+                Message m = (Message)formatter.Deserialize(input);
+                return m;
+            }
+            catch(SerializationException e)
+            {
+                Console.WriteLine(e.ToString());
             }
             catch (IOException e)
             {
@@ -93,6 +99,10 @@ namespace Chat.Net
             {
                 BinaryFormatter bf = new BinaryFormatter();
                 bf.Serialize(comm.GetStream(), m);
+            }
+            catch (SerializationException e)
+            {
+                Console.WriteLine(e.ToString());
             }
             catch (IOException e)
             {

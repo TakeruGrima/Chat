@@ -10,7 +10,6 @@ C:\Users\polo\Documents\Chat\ChatIHM\bin\Debug\Server.pdb
 C:\Users\polo\Documents\Chat\ChatIHM\bin\Debug\Server.exe.config
 C:\Users\polo\Documents\Chat\ChatIHM\obj\Debug\ChatIHM.csprojResolveAssemblyReference.cache
 C:\Users\polo\Documents\Chat\ChatIHM\obj\Debug\ChatIHM.AuthentificationForm.resources
-C:\Users\polo\Documents\Chat\ChatIHM\obj\Debug\ChatIHM.MainForm.resources
 C:\Users\polo\Documents\Chat\ChatIHM\obj\Debug\ChatIHM.Properties.Resources.resources
 C:\Users\polo\Documents\Chat\ChatIHM\obj\Debug\ChatIHM.csproj.GenerateResource.Cache
 C:\Users\polo\Documents\Chat\ChatIHM\obj\Debug\ChatIHM.csproj.CoreCompileInputs.cache
@@ -19,3 +18,49 @@ C:\Users\polo\Documents\Chat\ChatIHM\obj\Debug\ChatIHM.pdb
 C:\Users\polo\Documents\Chat\ChatIHM\bin\Debug\ChatIHM.exe.config
 C:\Users\polo\Documents\Chat\ChatIHM\bin\Debug\ChatIHM.pdb
 C:\Users\polo\Documents\Chat\ChatIHM\obj\Debug\ChatIHM.ChatroomIHM.resources
+C:\Users\polo\Documents\Chat\ChatIHM\obj\Debug\ChatIHM.TopicForm.resources
+C:\Users\polo\Documents\Chat\ChatIHM\obj\Debug\ChatIHM.InscriptionForm.resources
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\ChatIHM.exe.config
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\ChatIHM.exe
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\ChatIHM.pdb
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Chat.exe
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Client.exe
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Server.exe
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Chat.pdb
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Chat.exe.config
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Client.pdb
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Client.exe.config
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Server.pdb
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Server.exe.config
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.csprojResolveAssemblyReference.cache
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.AuthentificationForm.resources
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.ChatroomIHM.resources
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.InscriptionForm.resources
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.Properties.Resources.resources
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.TopicForm.resources
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.csproj.GenerateResource.Cache
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.csproj.CoreCompileInputs.cache
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.exe
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.csprojResolveAssemblyReference.cache
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.AuthentificationForm.resources
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.ChatroomIHM.resources
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.InscriptionForm.resources
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.Properties.Resources.resources
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.TopicForm.resources
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.csproj.GenerateResource.Cache
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.csproj.CoreCompileInputs.cache
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.exe
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\obj\Debug\ChatIHM.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\ChatIHM.exe.config
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\ChatIHM.exe
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\ChatIHM.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Chat.exe
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Client.exe
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Server.exe
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Chat.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Chat.exe.config
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Client.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Client.exe.config
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Server.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\ChatIHM\bin\Debug\Server.exe.config

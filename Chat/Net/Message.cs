@@ -4,9 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Created by Timothée LE CORRE and Camille Melo
+
 namespace Chat.Net
 {
-    public enum Header { DEBUG, LIST_TOPIC, CREATE_TOPIC, JOIN_TOPIC, JOIN, POST, QUIT, GET, JOINED, LEFT,CONNECT,REGISTER }
+    public enum Header { DEBUG, LIST_TOPIC,
+        CREATE_TOPIC,TOPIC_IS_CREATE, JOIN_TOPIC,TOPIC_EXIST,
+        JOIN, POST, QUIT, GET, JOINED, LEFT,
+        CONNECT,REGISTER,ALREADYEXIST,REGISTERED,
+        ISCONNECTED,ISUNCONNECTED,ALREADYCONNECTED,DISCONNECT }
+
     [Serializable]
     public class Message
     {

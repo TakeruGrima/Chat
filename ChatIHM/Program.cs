@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Created by Timothée LE CORRE and Camille Melo
+
 namespace ChatIHM
 {
     static class Program
