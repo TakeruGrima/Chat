@@ -5,7 +5,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+
+//Created by Timothée LE CORRE and Camille Melo
 
 namespace Client
 {
@@ -31,6 +34,21 @@ namespace Client
             }
         }
 
+        public List<Message> Messages
+        {
+            get
+            {
+                return messages;
+            }
+        }
+
+
+        public string Topic
+        {
+            get { return topic; }
+            set { topic = value; }
+        }
+
         #endregion
 
         #region ChatRoom methods
@@ -39,6 +57,7 @@ namespace Client
         {
             Message message;
             String topic = "";
+
             try
             {
                 message = GetMessage();
@@ -57,7 +76,10 @@ namespace Client
             {
                 Message m = new Message(Header.JOIN,c.GetAlias());
                 SendMessage(m);
+
                 user = c;
+
+                new Thread(new ThreadStart(Run)).Start();
             }
             catch (IOException e)
             {
@@ -67,13 +89,11 @@ namespace Client
 
         public void Post(string msg, Chatter c)
         {
-            //Console.WriteLine("nous envoyons un message");
             Message message = new Message(Header.POST);
             message.Add(c.GetAlias());
             message.Add(msg);
             try
             {
-                //Console.WriteLine("message en cours d'envoi");
                 SendMessage(message);
             }
             catch (IOException e)
@@ -101,7 +121,6 @@ namespace Client
 
         public void Run()
         {
-            Console.WriteLine("?????");
             try
             {
                 Message message;
@@ -111,32 +130,31 @@ namespace Client
                     {
                         case Header.JOINED:
                             pseudos.Add(message.data[0]);
+                            messages.Add(message);
+
                             if (user != null)
                             {
                                 user.JoinNotification(new TextChatter(message.data[0]));
-                                Console.WriteLine("huh");
                             }
-                            Console.WriteLine(pseudos);
                             break;
+
                         case Header.GET:
                             messages.Add(message);
                             if (user != null)
                             {
                                 user.ReceiveAMessage(message.data[1], new TextChatter(message.data[0]));
                             }
-                            Console.WriteLine("get message" + messages);
                             break;
                         case Header.LEFT:
-                            pseudos.Remove(message.data[0]);
-                            if (user != null)
+                            messages.Add(message);
+                            if (user != null && !pseudos.Contains(message.data[0]))
                             {
                                 user.QuitNotification(new TextChatter(message.data[0]));
                             }
-                            Console.WriteLine(pseudos);
+                            pseudos.Remove(message.data[0]);
                             break;
                     }
                 }
-                Console.WriteLine("End of while");
             }
             catch (IOException e)
             {

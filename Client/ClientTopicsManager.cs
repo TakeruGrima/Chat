@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+//Created by Timothée LE CORRE and Camille Melo
+
 namespace Client
 {
     public class ClientTopicsManager : TCPClient, TopicsManager
@@ -20,12 +22,10 @@ namespace Client
             List<String> topics = null;
             try
             {
-                //Console.WriteLine("nous envoyons un message");
                 SendMessage(message);
-                //Console.WriteLine("message envoyé, nous attendons une réponse");
+         
                 Message answer = GetMessage();
                 topics = answer.data;
-                Console.WriteLine("liste des topic" + topics);
             }
             catch (Exception e)
             {
@@ -39,21 +39,17 @@ namespace Client
             Message message = new Message(Header.JOIN_TOPIC, topic);
             try
             {
-                Console.WriteLine("test");
                 SendMessage(message);
-                Console.WriteLine(message.data[0]);
+
                 Message answer = GetMessage();
 
-                Console.WriteLine("test3");
                 int port;
                 Int32.TryParse(answer.data[0],out port);
 
                 ClientChatRoom chatroom = new ClientChatRoom();
-                Console.WriteLine(port);
                 chatroom.SetServer(Adr, port);
                 chatroom.Connect();
-                Thread thread = new Thread(chatroom.Run);
-                thread.Start();
+
                 return chatroom;
             }
             catch (Exception e)
@@ -80,7 +76,8 @@ namespace Client
 
         #region methods
 
-        public void Login(string login, string password)
+        //return true if the login successed
+        public bool Login(string login, string password,ref string messageError)
         {
             try
             {
@@ -88,15 +85,34 @@ namespace Client
 
                 Message m = new Message(Header.CONNECT, loginstring);
                 SendMessage(m);
-                //user = c;
+
+                Message answer = GetMessage();
+
+                if (answer.head == Header.ISUNCONNECTED)
+                {
+                    Console.WriteLine("Password or Login is incorrect");
+                    messageError = "incorrect";
+                    return false;
+                }
+                else if(answer.head == Header.ALREADYCONNECTED)
+                {
+                    Console.WriteLine("This user is already connected");
+                    messageError = "alreadyConnect";
+                    return false;
+                }
+                else if(answer.head == Header.ISCONNECTED)
+                {
+                    return true;
+                }
             }
             catch (IOException e)
             {
                 Console.WriteLine(e.ToString());
             }
+            return false;
         }
 
-        public void Register(string login, string password)
+        public bool Register(string login, string password)
         {
             try
             {
@@ -104,9 +120,35 @@ namespace Client
 
                 Message m = new Message(Header.REGISTER, loginstring);
                 SendMessage(m);
-                //user = c;
+
+                Message answer = GetMessage();
+
+                if (answer.head == Header.ALREADYEXIST)
+                {
+                    Console.WriteLine("This user already exist!");
+                    return false;
+                }
+                else if (answer.head == Header.REGISTERED)
+                {
+                    Console.WriteLine("REGISTERED!");
+                    return true;
+                }
             }
             catch (IOException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            return false;
+        }
+
+        public void ChatterDisconnect(Chatter c)
+        {
+            Message message = new Message(Header.DISCONNECT,c.GetAlias());
+            try
+            {
+                SendMessage(message);
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
             }

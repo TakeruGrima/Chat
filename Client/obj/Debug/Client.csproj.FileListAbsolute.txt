@@ -17,3 +17,23 @@ C:\Users\polo\Documents\Chat\Client\obj\Debug\Client.csprojResolveAssemblyRefere
 C:\Users\polo\Documents\Chat\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 C:\Users\polo\Documents\Chat\Client\obj\Debug\Client.exe
 C:\Users\polo\Documents\Chat\Client\obj\Debug\Client.pdb
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Client\bin\Debug\Client.exe.config
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Client\bin\Debug\Client.exe
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Client\bin\Debug\Client.pdb
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Client\bin\Debug\Chat.exe
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Client\bin\Debug\Chat.pdb
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Client\bin\Debug\Chat.exe.config
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Client\obj\Debug\Client.exe
+C:\Users\polo\Downloads\CHAT-Le-Corre-Melo\Client\obj\Debug\Client.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Client\bin\Debug\Client.exe.config
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Client\bin\Debug\Client.exe
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Client\bin\Debug\Client.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Client\bin\Debug\Chat.exe
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Client\bin\Debug\Chat.pdb
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Client\bin\Debug\Chat.exe.config
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Client\obj\Debug\Client.exe
+C:\Users\polo\Documents\Cours\Cours Efrei\M1\c#\Projet\CHAT-Le-Corre-Melo\Client\obj\Debug\Client.pdb

@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Created by Timothée LE CORRE and Camille Melo
+
 namespace Server
 {
     class TCPTopicsManager : TextGestTopics
@@ -17,21 +19,48 @@ namespace Server
 
         #endregion
 
+        #region Constructor
+
+        public TCPTopicsManager()
+        {
+            try
+            {
+                Load("Topics.txt");
+
+                foreach(string topic in Topics)
+                {
+                    StartServerChatroom(topic);
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+
+        #endregion
+
         #region methods
 
         public new void CreateTopic(String topic)
         {
             base.CreateTopic(topic);
+            StartServerChatroom(topic);
+        }
+
+        public void StartServerChatroom(string topic)
+        {
             Chatroom chatroom = base.JoinTopic(topic);
+            chatroom.Topic = topic;
+
             ServerChatRoom serverChatRoom = new ServerChatRoom(chatroom);
             tcpChatrooms.Add(topic, serverChatRoom);
+
             bool started = true;
-            //Console.WriteLine("before while");
             do
             {
                 try
                 {
-                    Console.WriteLine("PORT:"+ nextPort);
                     serverChatRoom.StartServer(nextPort);
                     started = true;
                 }
@@ -41,9 +70,7 @@ namespace Server
                     Console.WriteLine(e.ToString());
                 }
                 nextPort++;
-                //Console.WriteLine("in while");
             } while (!started);
-            //Console.WriteLine("off while");
         }
 
         public int getTopicPort(String topic)
